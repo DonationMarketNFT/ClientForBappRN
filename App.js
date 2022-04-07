@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import BottomTabs from "./screens/BottomTabs";
+import HomeScreen from "./screens/HomeScreen";
 
 const AppStack = createNativeStackNavigator();
 
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <AppStack.Navigator
-        initialRouteName={"BottomTabs"}
+        initialRouteName={"HomeScreen"}
         screenOptions={{
           headerShown: false,
           gestureEnabled: true,
@@ -19,8 +20,8 @@ export default function App() {
         }}
       >
         <AppStack.Screen
-          name="BottomTabs"
-          component={BottomTabs}
+          name="HomeScreen"
+          component={HomeScreen}
           options={{ headerShow: false }}
         />
       </AppStack.Navigator>

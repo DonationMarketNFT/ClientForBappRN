@@ -8,9 +8,10 @@ import { StatusBar } from "expo-status-bar";
 
 const HomeScreen = () => {
   return (
-    <View style={{ width: "100%", height: "100%" }}>
+    <SafeAreaView style={{ width: "100%", height: "100%" }}>
+      <StatusBar barStyle="light-content"></StatusBar>
       <WebView source={{ uri: "http://localhost:3003" }}></WebView>
-    </View>
+    </SafeAreaView>
   );
 };
 export default HomeScreen;
